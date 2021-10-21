@@ -4,7 +4,8 @@
   "description": "session type with buttons / footer / sass pre-installed",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style expanded",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/toops61/tests_jquery/issues"
   },
-  "homepage": "https://github.com/toops61/tests_jquery#readme"
+  "homepage": "https://github.com/toops61/tests_jquery#readme",
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
 }
