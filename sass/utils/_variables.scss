@@ -1,0 +1,27 @@
+$breakpoint-mobile: 400px;
+$breakpoint-ipad: 768px;
+
+$primary-color: #676bc0;
+$primary-color-dark: darken($color: #676bc0, $amount: 60%);
+$secondary-color: #60d2d6;
+$secondary-color-dark: darken($color: #60d2d6, $amount: 40%);
+$third-color: #a32913;
+$fourth-color: #18742f;
+$fifth-color: #8f2cad;
+$sixth-color: #1bc584;
+
+$facebook-color: #3b5998;
+$bandcamp-color: #629aa9;
+$youtube-color: #c4302b;
+$linkedin-color: #007BB5;
+$twitter-color: #00acee;
+$snapchat-color: #FFFC00;
+$tiktok-aqua: #00f2ea;
+$tiktok-red: #ff0050;
+$reddit-color: #FF4019;
+$twitch-color: #6441A5;
+
+$btn-width: 4rem;
+$btn-height: 1.2rem;
+$btn-large-width: 9rem;
+$btn-large-height: 2.3rem;

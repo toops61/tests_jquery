@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $secondary-color;
+    &.dark {
+        background-color: darken($color: $secondary-color, $amount: 50%);
+        color: lighten($color: $secondary-color, $amount: 50%);
+    }
+}
+
+main {
+    width: 80%;
+    margin: 1rem auto;
+}
+
+ul, li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }

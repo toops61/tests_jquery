@@ -1,0 +1,19 @@
+{
+  "name": "jquery_exercices_grafikart",
+  "version": "1.0.0",
+  "description": "session type with buttons / footer / sass pre-installed",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toops61/tests_jquery.git"
+  },
+  "author": "Toops61",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/toops61/tests_jquery/issues"
+  },
+  "homepage": "https://github.com/toops61/tests_jquery#readme"
+}

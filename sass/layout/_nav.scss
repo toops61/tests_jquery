@@ -1,0 +1,28 @@
+.tabs {
+    width: 90%;
+    max-width: 40rem;
+    display: flex;
+    li {
+        border: solid $secondary-color-dark;
+        border-bottom: none;
+        border-radius: 20px 20px 0 0;
+        padding: 1rem;
+        a {
+            color: $secondary-color-dark;
+        }
+    }
+    &__content {
+        display: none;
+        padding: 1rem;
+        &.active {
+            display: block;
+            @include activeColors;
+        }
+    }
+    .active {
+        @include activeColors;
+        a {
+            color: white;
+        }
+    }
+}

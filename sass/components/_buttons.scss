@@ -1,0 +1,157 @@
+.arrow-up {
+    display: none;
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(0,0,0,.7);
+    &.appears {
+        @include flexCenter;
+    }
+    div {
+        color: white;
+        &::before {
+            @include icon('\f077');
+        }
+    }
+}
+
+.btn {
+    @include btn;
+    transition: transform .5s ease-in;
+    &:hover{
+        transform: scale(1.3);
+    }
+}
+
+.btn-onOff {
+    position: relative;
+    background-color: lighten($color: $fourth-color, $amount: 40%);
+    display: flex;
+    align-items: center;
+    width: 4rem;
+    height: 2rem;
+    border-radius: 20px;
+    border: solid black;
+    &__switch {
+        background-color: $fourth-color;
+        color: white;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        border: solid black;
+        transition: transform 300ms ease-in;
+        margin-left: -3px;
+        @include flexCenter;
+        &.switched {
+            transform: translateX(2rem);
+        }
+    }
+}
+
+.icones {
+    display: flex;
+    justify-content: space-between;
+}
+
+.coeur {
+    margin: 2rem;
+    width: 3rem;
+    height: 3rem;
+    @include flexCenter;
+    div::before{
+        @include icon('\f004', 2rem);
+        color: $third-color;
+    }
+    div:hover{
+        animation: clignote 2s ease-in-out infinite forwards;
+    }
+}
+
+.death {
+    margin: 2rem;
+    width: 4rem;
+    height: 4rem;
+    background-color: black;
+    @include flexCenter;
+    div::before{
+        @include icon('\f714', 2rem);
+        color: white;
+    }
+    div:hover{
+        animation: clignote 2s ease-in-out infinite forwards;
+    }
+}
+
+.reseaux__btn {
+    @include btn-large;
+    text-shadow: none;
+    border: solid black;
+    &__logo {
+        position: relative;
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    h3 {
+        margin-left: .2rem;
+        font-size: 1.4rem;
+        color: black;
+    }
+    &:hover {
+        animation: shake 1s ease-in-out forwards;
+    }
+}
+
+#twitter .reseaux__btn__logo div::before {
+    @include iconBrands ("\f081", 1.8rem);
+    color: $twitter-color;
+}
+
+#facebook .reseaux__btn__logo div::before {
+    @include iconBrands ("\f09a", 1.8rem);
+    color: $facebook-color;
+}
+
+#instagram .reseaux__btn__logo div::before {
+    @include iconBrands ("\e055", 1.8rem);
+    background: -webkit-linear-gradient(49.2deg,#f9ed32 10%,#ee2a7b 55%,#002aff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#linkedin .reseaux__btn__logo div::before {
+    @include iconBrands ("\f08c", 1.8rem);
+    color: $linkedin-color;
+}
+
+#tiktok .reseaux__btn__logo{
+    background-color: black;
+    border-radius: 5px;
+    &::after{
+        @include iconBrands ("\e07b", 1.2rem);
+        color: $tiktok-red;
+    }
+    div::before{
+        @include iconBrands ("\e07b", 1.2rem);
+        position: absolute;
+        color: $tiktok-aqua;
+        @include position(4px,7px);
+    }
+    div::after{
+        @include iconBrands ("\e07b", 1.2rem);
+        position: absolute;
+        color: white;
+        @include position(5px,5px);
+        }
+    
+}
+
+#youtube .reseaux__btn__logo
+    div::before {
+    @include iconBrands ("\f167", 1.8rem);
+    color: $youtube-color;
+}

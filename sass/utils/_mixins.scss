@@ -1,0 +1,125 @@
+@mixin position ($top: 0px, $right: 0px) {
+    top: $top;
+    right: $right;
+}
+
+@mixin positionTRBL ($top: 0px, $right: 0px, $bottom: 0px, $left: 0px) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin btn-shadow ($offsetX: 2px, $offsetY: 2px, $blur: 14px)  {
+    box-shadow: $offsetX $offsetY $blur darken($fourth-color,30%);
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin marginCenter ($marginTop: 1rem) {
+    margin: $marginTop, auto;
+}
+
+@mixin mobile-version {
+    @media screen and (max-width:$breakpoint-mobile) {
+        @content;
+    }
+}
+
+@mixin tablette-version {
+    @media screen and (max-width:$breakpoint-ipad) {
+        @content;
+    }
+}
+
+@mixin iconBrands ($content: "\f09a", $font-size: 1.4em) {
+    content: $content;
+    font-family: 'Font Awesome 5 brands';
+    font-weight: 400;
+    font-size: $font-size;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+@mixin iconEmpty ($content: "\f005", $font-size: 1.4em) {
+    content: $content;
+    font-family: 'Font Awesome 5 empty';
+    font-weight: 400;
+    font-size: $font-size;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+@mixin icon ($content: "\f005", $font-size: 1.4em) {
+    content: $content;
+    font-family: 'Font Awesome 5';
+    font-weight: 900;
+    font-size: $font-size;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+@mixin instagramColor {
+    background: linear-gradient(49.2deg,#f9ed32 10%,#ee2a7b 55%,#002aff);
+}
+
+@mixin tiktokColor {
+    background: linear-gradient(49.2deg,#00f2ea,#ff0050);
+}
+
+@mixin activeColors {
+    background-color: $secondary-color-dark;
+    color: white;
+}
+
+@mixin btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    border: solid $primary-color;
+    color: $primary-color;
+    background-color: white;
+    text-shadow: 1px 1px 1px $primary-color-dark;
+    border-radius: 30px;
+    box-shadow: 2px 2px 8px $primary-color-dark;
+    width: $btn-width;
+    height: $btn-height;
+}
+
+@mixin btn-large {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    border: solid $primary-color;
+    color: $primary-color;
+    background-color: white;
+    text-shadow: 1px 1px 1px $primary-color-dark;
+    border-radius: 30px;
+    box-shadow: 2px 2px 8px $primary-color-dark;
+    width: $btn-large-width;
+    height: $btn-large-height;
+}
+
+@mixin imageFit {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
